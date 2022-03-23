@@ -7,7 +7,9 @@
         <span class="block truncate font-semibold text-xs md:text-sm">{{
           selectedOption.title
         }}</span>
-        <span class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
+        <span
+          class="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none"
+        >
           <slot name="icon">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -17,7 +19,11 @@
               stroke="currentColor"
               stroke-width="2"
             >
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </slot>
         </span>
@@ -40,11 +46,16 @@
             <li
               :class="[
                 active ? 'text-sky-900 bg-sky-50' : 'text-gray-900',
-                'cursor-default select-none relative py-2 pl-10 pr-4'
+                'cursor-default select-none relative py-2 pl-10 pr-4',
               ]"
               class="text-xs md:text-sm"
             >
-              <span :class="[selected ? 'font-medium' : 'font-normal', 'block truncate']">
+              <span
+                :class="[
+                  selected ? 'font-medium' : 'font-normal',
+                  'block truncate',
+                ]"
+              >
                 {{ option.title }}
               </span>
               <span
@@ -59,7 +70,11 @@
                   stroke="currentColor"
                   stroke-width="2"
                 >
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
                 </svg>
               </span>
             </li>
@@ -71,19 +86,24 @@
 </template>
 
 <script setup>
-import { ref, defineProps } from 'vue'
-import { Listbox, ListboxButton, ListboxOptions, ListboxOption } from '@headlessui/vue'
+import { ref, defineProps } from "vue";
+import {
+  Listbox,
+  ListboxButton,
+  ListboxOptions,
+  ListboxOption,
+} from "@headlessui/vue";
 
 const props = defineProps({
   options: {
     type: Array,
     default: () => {
-      return [{ id: null, title: null, unavailable: false }]
-    }
-  }
-})
+      return [{ id: null, title: null, unavailable: false }];
+    },
+  },
+});
 
-const selectedOption = ref(props.options[0])
+const selectedOption = ref(props.options[0]);
 </script>
 
 <style></style>

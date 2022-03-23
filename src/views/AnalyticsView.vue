@@ -44,26 +44,28 @@
 </template>
 
 <script setup>
-import NavBar from '../components/NavBar.vue'
-import Listbox from '../components/Listbox.vue'
+import NavBar from "../components/NavBar.vue";
+import Listbox from "../components/Listbox.vue";
 
-import Sales from '../components/Sales.vue'
-import Engagement from '../components/Engagement.vue'
-import Acquisition from '../components/Acquisition.vue'
-import RewardsProgram from '../components/RewardsProgram.vue'
+import Sales from "../components/Sales.vue";
+import Engagement from "../components/Engagement.vue";
+import Acquisition from "../components/Acquisition.vue";
+import RewardsProgram from "../components/RewardsProgram.vue";
 
-import SalesOverview from '../components/SalesOverview.vue'
-import BranchPerformance from '../components/BranchPerformance.vue'
-import RewardsPerformance from '../components/RewardsPerformance.vue'
+import SalesOverview from "../components/SalesOverview.vue";
+import BranchPerformance from "../components/BranchPerformance.vue";
+import RewardsPerformance from "../components/RewardsPerformance.vue";
 
 const filterOneOptions = [
-  { id: 1, title: 'Last 7 Days', unavailable: false },
-  { id: 2, title: 'Today', unavailable: false },
-  { id: 3, title: 'Tomorrow', unavailable: false }
-]
+  { id: 1, title: "Last 7 Days", unavailable: false },
+  { id: 2, title: "Today", unavailable: false },
+  { id: 3, title: "Tomorrow", unavailable: false },
+];
 
 //DISCLAIMER: This is just a placeholder. A Datepicker component is more suitable.
-const filterTwoOptions = [{ id: 1, title: '1 Jan 2019 - 7 Jan 2019', unavailable: false }]
+const filterTwoOptions = [
+  { id: 1, title: "1 Jan 2019 - 7 Jan 2019", unavailable: false },
+];
 </script>
 
 <style></style>
